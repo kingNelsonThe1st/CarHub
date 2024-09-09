@@ -47,7 +47,6 @@ export interface OptionProps {
 export interface CustomFilterProps {
     title: string;
     options: OptionProps[];
-    setFilter: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export interface ShowMoreProps {

@@ -6,12 +6,12 @@ import { Listbox, Transition } from '@headlessui/react'
 import { CustomFilterProps } from '@/props'
 import { updateSearchParams } from '@/utils'
 
-const CustomFilter = ({ title, options, setFilter }: CustomFilterProps) => {
+const CustomFilter = ({ title, options, }: CustomFilterProps) => {
   const [selected, setselected] = useState(options[0])
 
   return (
     <div className='w-fit'>
-      <Listbox value={selected} onChange={(e) =>  {setselected(e); setFilter(e.value) }}>
+      <Listbox value={selected} onChange={(e) =>  {setselected(e); }}>
         <div className="relative w-fit z-10">
           <Listbox.Button className='custom-filter__btn'>
             <span className='block truncate'>{selected.title}</span>
