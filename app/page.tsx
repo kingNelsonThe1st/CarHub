@@ -20,7 +20,7 @@ export default function Home() {
   const [year, setYear] = useState(2022);
 
   //pagination states
-  const [limit, setLimit] = useState(10)
+  const [limit, setLimit] = useState(10);
 
   const getCars = async () => {
     const result = await fetchCars({
@@ -74,7 +74,7 @@ export default function Home() {
             <ShowMore
               pageNumber= {limit / 10}
               isNext= {limit > allCars.length}
-              setLimit={setLimit}
+              
             />
           </section>
         ): (
